@@ -1,0 +1,247 @@
+body {
+    background-position: fixed;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+}
+
+/* for mobile devices */
+@media only screen and (max-width: 768px) {
+    .content{
+      display: none;
+    }
+  }
+
+/* first block   */
+.intro {
+    background: #B22222;
+    width: 1, 280px;
+    height: 840px;
+    top: -487px;
+    left: -355px;
+    padding: 70px;
+    gap: 10px;
+    border-radius: 40px;
+    opacity: 0px;
+
+}
+
+.paragraph {
+    font-family: 'Poppins';
+    color: white;
+    line-height: 100px;
+    font-size: 80px;
+    font-weight: 300;
+    width: 1140px;
+    height: 700px;
+}
+
+/* First gallery */
+.gallery1 {
+    display: flex;
+    gap: 0px;
+    opacity: 0px;
+    align-items: flex-end;
+    margin-left: 5%;
+    margin-top: 5%;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+    width: 400px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+}
+
+
+
+.img-container {
+    position: relative;
+    width: 293px;
+    height: 588px;
+    overflow: hidden;
+    display: block;
+}
+
+.img-container:nth-of-type(1) .img {
+    background-image: url(img/image1.jpg);
+}
+
+.img-container:nth-of-type(2) .img {
+    background-image: url(img/image2.jpg);
+}
+
+.img-container:nth-of-type(3) .img {
+    background-image: url(img/image3.jpg);
+}
+
+.img-container:nth-of-type(4) .img {
+    background-image: url(img/image4.jpg);
+}
+
+
+.img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: cover;
+    background-position: center;
+    width: 293px;
+    height: 588px;
+    color: black;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    margin-right: 3px;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.img-container:hover .img {
+    filter: blur(5px) grayscale(100%);  /* Blur and black background */
+    transform: scale(1.1); /* The images zoom when they are hovered */
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.content {
+    width: 293px;
+    height: 588px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.content p {
+    font-family: 'D-DIN Condensed';
+    color: white;
+    font-size: 36px;
+    font-weight: 520;
+    text-align: left;
+    width: 213px;
+    opacity: 98%;
+    height: 76px;
+    padding: 20px 0px 0px 10px;
+    align-items: center;
+    margin: 0px;
+}
+
+.content .small {
+    font-family: Poppins;
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    opacity: 70%;
+    transition: fit-content 0.8s ease-in-out;
+}
+
+.img-container:hover .small {
+    height: fit-content;
+}
+
+/* Know more and hovering */
+
+.content .know-more {
+    display: none;
+    transition: display 0.8s ease-in-out;
+    background: rgba(0, 0, 0, 0.01);
+    color: #00DBFF;;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    transition: opacity 0.8s unset;
+    margin-top: -35px;
+    /* -webkit-transition: opacity var(--transition-duration), -webkit-transform 0.8s;
+	transition: opacity 0.8s, transform var(--transition-duration); */
+}
+
+.content:hover .know-more{
+    opacity: none;
+    transition: opacity 0.8s, transform var(--transition-duration);
+
+}
+
+.img-container:hover .know-more {
+    display: flex;
+}
+
+/* Second Gallery */
+
+.gallery2 {
+    display: flex;
+    width: 400px;
+    height: 600px;
+    top: 1490px;
+    left: -355px;
+    gap: 2px;
+    opacity: 0px;
+    margin-top: 10%;
+    margin-left: 5%;
+    overflow: hidden;
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+    background-size: cover;
+    background-position: center;
+    width: 98.5px;
+    height: 600px;
+    padding: 40px 0px 0px 0px;
+    gap: 8px;
+    opacity: 0px;
+    border: 10px;
+    border-color: black;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+
+}
+
+.image1 {
+    background-image: url(img/image1.jpg);
+}
+
+.image1:hover {
+    filter: blur(5px) grayscale(200%);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transform: scale(1.03);
+}
+
+.image2 {
+    background-image: url(img/image2.jpg);
+}
+
+.image2:hover {
+    filter: blur(5px) grayscale(200%);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transform: scale(1.03);
+}
+
+.image3 {
+    background-image: url(img/image3.jpg);
+}
+
+.image3:hover {
+    filter: blur(5px) grayscale(200%);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transform: scale(1.03);
+}
+
+.image4 {
+    background-image: url(img/image4.jpg);
+}
+
+.image4:hover {
+    filter: blur(5px) grayscale(200%);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transform: scale(1.03);
+}
